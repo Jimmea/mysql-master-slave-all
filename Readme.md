@@ -61,13 +61,15 @@ Khi quá trình nhân bản được khởi động, có 2 luồng chạy trên 
 
 
 # Các Test Case cho MariaDB Master-Slave
+
+## Giới thiệu
 Với cơ sở dữ liệu, nhu cầu lưu trữ lớn, đòi hỏi cơ sở dữ liệu toàn vẹn, trường hợp gặp những sự cố ngoài dự đoán là rất cao sẽ làm mất mát dữ liệu. Vậy một số sự cố thường gặp và cách khắc phục nó ra sao?
 
 
 Trong bài viết dưới đây mình sẽ trình bày một số sự cố đó và cách khắc phục trong quá trình vận hành MariaDB Master-Slave.
 
-## 1. Node Failed
-### 1.1 Master Failed
+## Node Failed
+### Master Failed
 
 *Mô tả*
 
@@ -123,7 +125,7 @@ Slave database tiếp tục pull dữ liệu từ master về tính từ thời 
 
 
 
-### 1.3 Promoting a Slave to Master
+## Promoting a Slave to Master
 *Mô tả*
 
 Giả lập Master bị hỏng
