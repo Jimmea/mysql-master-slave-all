@@ -5,6 +5,7 @@ Server chứa dữ liệu gốc được gọi là Master, server chứa dữ li
 
 Bạn có thể kiểm soát dữ liệu cần sao chép. Tất cả các cơ sở dữ liệu, một hoặc nhiều cơ sở dữ liệu hoặc các bảng trong cơ sở dữ liệu đều có thể được sao chép có chọn lọc.
 
+
 # Ưu điểm của việc sử dụng Replication
 - Khả năng mở rộng – Scalability: Bằng cách có một hoặc nhiều server slave, việc đọc có thể được trải rộng trên nhiều server, giảm tải cho master. Kịch bản phổ biến nhất cho môi trường đọc cao, viết thấp là có một master, trong đó tất cả các ghi xảy ra, sao chép thành nhiều slave, xử lý hầu hết các lần đọc.
 
@@ -224,3 +225,8 @@ Dữ liệu của Database đã được phục hồi đến thời điểm trư
 
 Chúc mọi người thành công !
 
+
+# Tham khảo thêm cài đặt mysql slave-master
+- https://github.com/vbabak/docker-mysql-master-slave
+- https://github.com/vishalraj82/MySQLReplDocker
+- https://github.com/wagnerjfr/mysql-master-slaves-replication-docker
