@@ -75,6 +75,7 @@ Test với trường hợp tắt node master, sau vài phút bật lại.
 Insert và update một số bản ghi và kiểm tra sự đồng bộ giữa 2 nodes.
 
 *Quy trình thực hiện*
+
 Tạo một Table mới trong database Replica_db tên Test1 , insert vài bản ghi đơn giản , Slave đồng bộ bình thường.
 
 ```
@@ -93,6 +94,7 @@ Dữ liệu trên Master và Slave đồng bộ với nhau và không bị thấ
 
 
 ### 1.2 Slave Failed
+
 *Mô tả*
 Test với trường hợp tắt node Slave, sau vài giây bật lại.
 
@@ -123,6 +125,7 @@ Slave database tiếp tục pull dữ liệu từ master về tính từ thời 
 
 ### 1.3 Promoting a Slave to Master
 *Mô tả*
+
 Giả lập Master bị hỏng
 
 Chuyển node slave thành node master tạm thời
@@ -131,6 +134,7 @@ Sau khi dựng lại node master cũ, đưa node master cũ trở về master, n
 
 
 *Quy trình thực hiện*
+
 Master hỏng và không thể khôi phục hoạt động.
 
 Chuyển Node Slave thành Node Master bằng cách :
@@ -176,7 +180,7 @@ Thử insert vài bản ghi trên Master để kiểm tra.
 
 Hệ thống vẫn hoạt động cho khi Node Slave chuyển sang Master. Việc thay đổi Role này khá đơn giản và nhanh, đáp ứng được yêu cầu đề ra về tính sẵn sàng và đảm bảo dữ liệu.
 
-###1.4 Backup/Restore khi hệ thống Master Slave gặp sự cố
+### 1.4 Backup/Restore khi hệ thống Master Slave gặp sự cố
 
 Khi master gặp sự cố mất mát dữ liệu (record, Table, Schema v.v..) dẫn đến việc Slave cũng đồng bộ theo và khiến cho dữ liệu hệ thống mất đi.
 
@@ -211,6 +215,7 @@ mysqlbinlog master-bin.000001 master-bin.000002 master-bin.000003 | mysql -uroot
 ```
 
 *Kết quả*
+
 2 table usergroup và usergrouprole đã được khôi phục.
 
 Dữ liệu của Database đã được phục hồi đến thời điểm trước khi bị mất dữ liệu.
